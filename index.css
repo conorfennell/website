@@ -1,34 +1,50 @@
-.schedule {
-    color: orange;
-    white-space: pre-wrap;
-    text-align: center;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    margin: 10px;
+}
+
+nav {
+    background-color: black;
+    color: white;
     font-size: large;
+    border: 6px solid black;
 }
 
-.navbar {
-    background-color: #4287f5;
-    color: white;
-    width: 100%;
-    font-size: xx-large;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.body {
-    margin: 0px;
+nav ul li {
+    display: inline-block;
 }
 
-.nava {
+nav ul li a {
+    display: block;
     outline: none;
-    color: orange;
+    color: yellow;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
-.nava:hover {
-    outline: none;
+nav ul li a:hover {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+    animation-name: shake-twist;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes shake-twist {
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    70% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
